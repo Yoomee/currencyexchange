@@ -52,7 +52,7 @@ class CurrencyExchange
      end
 
      def self.convert(from_currency,to_currency,amount)
-         ((amount / from_currency.rate) * to_currency.rate).to_i
+         ((amount * 100 / from_currency.rate) * to_currency.rate).to_i.to_f / 100
      end
 
  end
